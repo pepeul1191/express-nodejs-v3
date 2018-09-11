@@ -4,9 +4,8 @@ var indexCss = function() {
   var rpta = [];
   if(constants.data.ambiente_static == 'desarrollo'){
     rpta = [
-      'bower_components/bootstrap/dist/css/bootstrap.min',
-      'bower_components/font-awesome/css/font-awesome.min',
-      'bower_components/swp-backbone/assets/css/constants',
+      'bower_components/material-design-lite/material.min',
+      'bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min',
       'assets/css/constants',
       'assets/css/error',
     ];

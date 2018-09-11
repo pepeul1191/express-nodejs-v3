@@ -1,7 +1,7 @@
 const data = {
   sistema_id: 1,
   base_url: 'http://localhost:3000/',
-  static_url: 'http://localhost:9090/',
+  static_url: 'http://localhost:3000/',
   ambiente_static: 'desarrollo',
   ambiente_csrf : 'inactivo',
   ambiente_session : 'inactivo',

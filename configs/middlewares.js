@@ -28,7 +28,11 @@ function error404(){
       };
       res.status(404).render('error/access', locals);
       */
-      res.redirect('/error/access/404');
+      var recurso = str.split(req.path);
+      var extensiones = ['css', 'js', 'png', 'jpg', ];
+      if(extensiones.indexOf(recurso[recurso.length - 1]) != -1){
+        res.redirect('/error/access/404');
+      }
     }else{
       var rpta = JSON.stringify({
           tipo_mensaje: 'error',
