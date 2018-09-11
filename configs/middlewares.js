@@ -1,5 +1,5 @@
 var constants = require('.config/constants');
-var helpers = require('.config/helpers');
+var helpers = require('.helpers');
 var errorHelper = require('../helpers/error_helper');
 
 function preResponse(){

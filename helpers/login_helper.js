@@ -7,13 +7,14 @@ var indexCss = function() {
       'bower_components/bootstrap/dist/css/bootstrap.min',
       'bower_components/font-awesome/css/font-awesome.min',
       'bower_components/swp-backbone/assets/css/constants',
+      'bower_components/swp-backbone/assets/css/login',
       'assets/css/constants',
-      'assets/css/error',
+      'assets/css/login',
     ];
   }
   if(constants.data.ambiente_static == 'produccion'){
     rpta = [
-      'dist/test.min'
+      'dist/login.min'
     ];
   }
   return rpta;
