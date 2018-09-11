@@ -1,11 +1,10 @@
-var constants = require('.config/constants');
-var helpers = require('.helpers');
+var constants = require('./constants');
+var helpers = require('./helpers');
 var errorHelper = require('../helpers/error_helper');
 
 function preResponse(){
   return function (req, res, next) {
     res.set('Server', 'Ubuntu');
-    res.set('sistema_id', 1);
     return next();
   }
 }
@@ -13,6 +12,7 @@ function preResponse(){
 function error404(){
   return function (req, res, next) {
     if ('GET' == req.method){
+      /*
       var locals = {
         constants: constants.data,
         title: 'Error',
@@ -27,6 +27,8 @@ function error404(){
         }
       };
       res.status(404).render('error/access', locals);
+      */
+      res.redirect('/error/access/404');
     }else{
       var rpta = JSON.stringify({
           tipo_mensaje: 'error',
