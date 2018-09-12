@@ -92,9 +92,9 @@ function checkCSRF(){
 
 function lang(req){
   var idioma = 'es';
-  if(req.session !== undefined){
+  /*if(req.session !== undefined){
     idioma = req.session.idioma;
-  }
+  }*/
   return idioma;
 }
 

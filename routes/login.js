@@ -72,9 +72,9 @@ router.post('/access', function(req, res, next) {
             _continue = false;
             message = loginContent.content.index.message_user_password[lang];
           }else{
-            //req.session.time = new Date().toLocaleTimeString();
-            //req.session.user = user;
-            //req.session.state = 'activate';
+            req.session.time = new Date().toLocaleTimeString();
+            req.session.user = user;
+            req.session.state = 'activate';
             res.redirect('/accesos/');
           }
         }else{
@@ -113,6 +113,18 @@ router.post('/access', function(req, res, next) {
     lang: lang,
   };
   res.render('login/index', locals);
+});
+
+router.get('/view', middlewares.sessionTrue(), function(req, res, next) {
+  body = 'Usuario: ' + req.session.user + '<br>' +
+    'Estado: ' + req.session.state + '<br>' +
+    'Momento: ' + req.session.time;
+  res.status(200).send(body);
+});
+
+router.get('/close', middlewares.sessionTrue(), function(req, res, next) {
+  req.session = null;
+  res.redirect('/login');
 });
 
 module.exports = router;
