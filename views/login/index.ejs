@@ -1,28 +1,4 @@
 <%- include('../partials/blank_header') %>
-<!--
-<div class="login-page">
-  <div class="form">
-    <i class="fa fa-universal-access" aria-hidden="true" id="logo-brand"></i>
-    <form class="login-form" action="<%=constants.base_url%>login/acceder" method="post">
-      <input type="text" name="usuario" placeholder="usuario"/>
-      <input type="password" name="contrasenia" placeholder="contrasenia"/>
-      <input type="hidden" name="<%=constants.csrf.key%>" value="<%=constants.csrf.secret%>"/>
-      <button>login</button>
-      <p class="mensaje-error"><%=mensaje%></p>
-      <p class="message">No está registrado? <a href="#" onclick="crearCuenta()">Crear cuenta</a></p>
-    </form>
-  </div>
-</div>
-<footer>
-<p>Powered by: <a href="http://softweb.pe/">Software Web Perú</a> © 2011-2018 </p>
-</footer>
-
-<script type="text/javascript">
-  function crearCuenta() {
-    alert("Operación no disponible");
-  }
-</script>
--->
 <div class="mdl-layout mdl-js-layout">
   <div id="login-conatiner" class="mdl-card mdl-shadow--16dp">
     <div class="mdl-card__supporting-text">
@@ -34,15 +10,15 @@
       </div>
       <form class="login-form" action="<%=constants['base_url']%>login/access" method="post">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" id="username"/>
-          <label class="mdl-textfield__label" for="username" name="user"><%= contents['index']['placeholder_usuario'][lang] %></label>
+          <input class="mdl-textfield__input" id="username" name="user"/>
+          <label class="mdl-textfield__label" for="username"><%= contents['index']['placeholder_usuario'][lang] %></label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="password" id="password" name="password"/>
           <label class="mdl-textfield__label" for="password"><%= contents['index']['placeholder_contrasenia'][lang] %></label>
         </div>
         <input type="hidden" name="<%=constants['csrf']['key']%>" value="<%=constants['csrf']['secret']%>">
-        <p class="color-error" id="mensaje"><%=locals['mensaje']%></p>
+        <p class="color-error" id="mensaje"><%=message%></p>
         <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white" type="submit">
           <%= contents['index']['text_button_ingresar'][lang] %>
         </button>
