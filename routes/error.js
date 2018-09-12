@@ -22,22 +22,17 @@ router.get('/access/8080', function(req, res, next) {
 });
 
 router.get('/access/:numero_error', function(req, res, next) {
-  if (req.method == 'GET'){
-    var locals = {
-      constants: constants.data,
-      title: 'Error',
-      helpers: helpers,
-      csss: errorHelper.accessCss(),
-      jss: errorHelper.accessJs(),
-      numero: 404,
-      contents: errorContent.content,
-      lang: middlewares.lang(req),
-    };
-    res.status(404).render('error/access', locals);
-  }else{
-    var rpta = errorContent.content['access'][404]['post_error'][middlewares.lang(req)];
-    res.status(404).send(rpta);
-  }
+  var locals = {
+    constants: constants.data,
+    title: 'Error',
+    helpers: helpers,
+    csss: errorHelper.accessCss(),
+    jss: errorHelper.accessJs(),
+    numero: 404,
+    contents: errorContent.content,
+    lang: middlewares.lang(req),
+  };
+  res.status(404).render('error/access', locals);
 });
 
 module.exports = router;

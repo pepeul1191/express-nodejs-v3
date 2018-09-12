@@ -1,6 +1,7 @@
 var constants = require('./constants');
 var helpers = require('./helpers');
 var errorHelper = require('../helpers/error_helper');
+var errorContent = require('../contents/error_content');
 
 function preResponse(){
   return function (req, res, next) {
@@ -12,22 +13,6 @@ function preResponse(){
 function error404(){
   return function (req, res, next) {
     if ('GET' == req.method){
-      /*
-      var locals = {
-        constants: constants.data,
-        title: 'Error',
-        helpers: helpers,
-        csss: errorHelper.indexCss(),
-        jss: errorHelper.indexJs(),
-        error: {
-          numero: 404,
-          mensaje: 'Archivo no encontrado',
-          descripcion: 'La página que busca no se encuentra en el servidor',
-          icono: 'fa fa-exclamation-triangle'
-        }
-      };
-      res.status(404).render('error/access', locals);
-      */
       var recurso = req.path.split('.');
       var extensiones = ['css', 'js', 'png', 'jpg', ];
       if(extensiones.indexOf(recurso[recurso.length - 1]) == -1){
@@ -36,12 +21,7 @@ function error404(){
         return next();
       }
     }else{
-      var rpta = JSON.stringify({
-          tipo_mensaje: 'error',
-          mensaje: [
-            'Recurso no encontrado',
-            'El recurso que busca no se encuentra en el servidor'
-        ]});
+      var rpta = errorContent.content['access'][404]['post_error'][lang(req)];
       res.status(404).send(rpta);
     }
   }
