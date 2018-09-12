@@ -4,7 +4,7 @@ const data = {
   static_url: 'http://localhost:3000/',
   ambiente_static: 'desarrollo',
   ambiente_csrf : 'inactivo',
-  ambiente_session : 'inactivo',
+  ambiente_session : 'activo',
   csrf: {
     secret: 'mpt/sr6eS2AlCRHU7DVThMgFTN08pnfSDf/C94eZx7udfm0lvgaYWLYJttYPKzGKDTlXwVU/d2FOxbKkgNlsTw==',
     key: 'csrf_val'
