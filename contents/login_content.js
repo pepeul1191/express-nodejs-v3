@@ -24,5 +24,9 @@ exports.content = {
       es: 'Olvidó su Contraseña',
       en: 'Forgot Password',
     },
+    message_csrf:{
+      es: 'Error en solicitud Token CSRF',
+      en: 'Token CSRF request error',
+    },
   },
 };

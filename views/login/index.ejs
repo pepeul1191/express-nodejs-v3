@@ -32,13 +32,13 @@
       <div id="card-heading">
         <%= contents['index']['titulo_form'][lang] %>
       </div>
-      <form class="login-form" action="<%=constants['base_url']%>login/acceder" method="post">
+      <form class="login-form" action="<%=constants['base_url']%>login/access" method="post">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" id="username"/>
-          <label class="mdl-textfield__label" for="username" name="usuario"><%= contents['index']['placeholder_usuario'][lang] %></label>
+          <label class="mdl-textfield__label" for="username" name="user"><%= contents['index']['placeholder_usuario'][lang] %></label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="password" id="password" name="contrasenia"/>
+          <input class="mdl-textfield__input" type="password" id="password" name="password"/>
           <label class="mdl-textfield__label" for="password"><%= contents['index']['placeholder_contrasenia'][lang] %></label>
         </div>
         <input type="hidden" name="<%=constants['csrf']['key']%>" value="<%=constants['csrf']['secret']%>">
