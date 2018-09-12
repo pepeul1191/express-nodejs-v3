@@ -15,6 +15,7 @@ router.get('/access/8080', function(req, res, next) {
     jss: errorHelper.accessJs(),
     numero: 8080,
     contents: errorContent.content,
+    lang: middlewares.lang(req),
   };
   res.status(500).render('error/access', locals);
   res.end('Cannot ' + req.method + ' ' + req.url);
@@ -30,7 +31,7 @@ router.get('/access/:numero_error', function(req, res, next) {
       jss: errorHelper.accessJs(),
       numero: 404,
       contents: errorContent.content,
-      idioma: middlewares.lang(req),
+      lang: middlewares.lang(req),
     };
     res.status(404).render('error/access', locals);
   }else{

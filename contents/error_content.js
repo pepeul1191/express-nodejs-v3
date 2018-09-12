@@ -17,6 +17,20 @@ exports.content = {
         es: 'Recurso no encontrado',
         en: 'Resource not found',
       },
-    }
+    },
+    8080: {
+      message: {
+        es: 'Su tiempo de sesión ha terminado',
+        en:'Your session time is over'
+      },
+      link: {
+        es: 'Ir al inicio',
+        en: 'Go to the beginning',
+      },
+      description: {
+        es: 'Necesita esta logueado',
+        en:'Need this login',
+      },
+    },
   }
 };
