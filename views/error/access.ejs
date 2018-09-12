@@ -1,6 +1,6 @@
 <%- include('../partials/blank_header.ejs') %>
-<h1 class="align-text-bottom"><%=error.numero%></h1>
-<%=error.mensaje%>
-<%=error.descripcion%>
-<a href="<%=constants.base_url%>login" class="return-btn"><i class="fa fa-home"></i>Ir al Inicio</a>
+<h1 class="align-text-bottom"><%=numero%></h1>
+<%=contents['access'][numero]['message'][idioma]%><br>
+<%=contents['access'][numero]['description'][idioma]%><br>
+<a href="<%=constants.base_url%>login" class="return-btn"><i class="fa fa-home"></i><%=contents['access'][numero]['link'][idioma]%></a>
 <%- include('../partials/blank_footer.ejs') %>

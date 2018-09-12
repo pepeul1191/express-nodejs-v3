@@ -110,6 +110,14 @@ function checkCSRF(){
   }
 }
 
+function lang(req){
+  var idioma = 'es';
+  if(req.session !== undefined){
+    idioma = req.session.idioma;
+  }
+  return idioma;
+}
+
 function tiempo(numero){
   return function (req, res, next) {
     if (numero % 2 == 0){
@@ -126,3 +134,4 @@ exports.sessionTrue = sessionTrue;
 exports.sessionFalse = sessionFalse;
 exports.checkCSRF = checkCSRF;
 exports.tiempo= tiempo;
+exports.lang = lang;

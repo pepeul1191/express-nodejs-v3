@@ -1,6 +1,6 @@
 var constants = require('../configs/constants');
 
-var indexCss = function() {
+var accessCss = function() {
   var rpta = [];
   if(constants.data.ambiente_static == 'desarrollo'){
     rpta = [
@@ -18,7 +18,7 @@ var indexCss = function() {
   return rpta;
 }
 
-var indexJs = function() {
+var accessJs = function() {
   if(constants.data.ambiente_static == 'desarrollo'){
     rpta = [
     ];
@@ -30,5 +30,5 @@ var indexJs = function() {
   return rpta;
 }
 
-exports.indexCss = indexCss;
-exports.indexJs = indexJs;
+exports.accessCss = accessCss;
+exports.accessJs = accessJs;
