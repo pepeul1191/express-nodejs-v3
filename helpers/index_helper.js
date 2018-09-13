@@ -8,12 +8,11 @@ var indexCss = function() {
       'bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min',
       'assets/css/constants',
       'assets/css/styles',
-      'assets/css/login',
     ];
   }
   if(constants.data.ambiente_static == 'produccion'){
     rpta = [
-      'dist/login.min'
+      'dist/index.min'
     ];
   }
   return rpta;

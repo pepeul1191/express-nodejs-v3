@@ -12,6 +12,12 @@ Arrancer servicio con autoreload con cambios:
 
     $ npm run start:dev {{puerto}}
 
+Para cambiar los colores del estilo de Material Design:
+
+    https://getmdl.io/customize/index.html
+
+y reemplazar public/bower_components/material-design-line/material.min.css
+
 ---
 
 Fuentes:
