@@ -14,3 +14,17 @@
 .message{
   text-align: center;
 }
+
+.icon-container{
+  background: #FDFDFD;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.icon-container > i{
+  color: var(--primary-color) !important;
+}
+
+.icon-container:hover, .icon-container > i:hover{
+  cursor: default;
+}
