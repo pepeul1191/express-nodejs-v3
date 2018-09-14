@@ -28,6 +28,14 @@ exports.content = {
       es: 'Enviar',
       en: 'Send',
     },
+    titulo_form_sign_in: {
+      es: 'Crear Cuenta',
+      en: 'Create Account',
+    },
+    text_button_sign_in: {
+      es: 'Crear',
+      en: 'Create',
+    },
     label_sigin: {
       es: 'Registrarse',
       en: 'Sign In',

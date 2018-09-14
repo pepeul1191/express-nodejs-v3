@@ -1,6 +1,6 @@
 <%- include('../partials/blank_header') %>
 <div class="mdl-layout mdl-js-layout" id="login-view">
-  <div id="login-conatiner" class="mdl-card mdl-shadow--16dp">
+  <div id="login-container" class="mdl-card mdl-shadow--16dp hide">
     <div class="mdl-card__supporting-text">
       <div id="login-fab" class="mdl-color--lime mdl-color-text--white">
         <i class="fas fa-lock"></i>
@@ -18,22 +18,22 @@
           <label class="mdl-textfield__label" for="password"><%= contents['index']['placeholder_password'][lang] %></label>
         </div>
         <input type="hidden" name="<%=constants['csrf']['key']%>" value="<%=constants['csrf']['secret']%>">
-        <p class="color-error" id="mensaje"><%=message%></p>
+        <p class="color-error" id="login-message"><%=message%></p>
         <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white" type="submit">
           <%= contents['index']['text_button_login'][lang] %>
         </button>
       </form>
     </div>
     <div class="mdl-card__actions">
-      <a class="mdl-button mdl-js-button mdl-button--primary" href="<%=constants['base_url']%>/login/sigin">
+      <a class="mdl-button mdl-js-button mdl-button--primary" href="<%=constants['base_url']%>login/#/sign_in">
         <%= contents['index']['label_sigin'][lang] %>
       </a>
-      <button id="forgotpassword" class="mdl-button mdl-js-button mdl-button--primary">
+      <a id="forgotpassword" class="mdl-button mdl-js-button mdl-button--primary" href="<%=constants['base_url']%>login/#/forgot_password">
         <%= contents['index']['label_password'][lang] %>
-      </button>
+      </a>
     </div>
   </div>
-  <div id="fogot-email-conatiner" class="mdl-card mdl-shadow--16dp hide">
+  <div id="forgot-password-container" class="mdl-card mdl-shadow--16dp hide">
     <div class="mdl-card__supporting-text">
       <div id="login-fab" class="mdl-color--lime mdl-color-text--white">
         <i class="fas fa-envelope"></i>
@@ -47,15 +47,33 @@
         <label class="mdl-textfield__label" for="txtEmail"><%= contents['index']['placeholder_email'][lang] %></label>
       </div>
       <input type="hidden" name="<%=constants['csrf']['key']%>" value="<%=constants['csrf']['secret']%>">
-      <p class="color-error" id="mensaje"><%=message%></p>
+      <p class="color-error" id="forgot-message"></p>
       <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored   mdl-color-text--white" type="submit">
         <%= contents['index']['text_button_send_password'][lang] %>
       </button>
     </div>
     <div class="mdl-card__actions">
-      <button id="returnlogin" class="mdl-button mdl-js-button mdl-button--primary">
+      <a id="returnlogin" class="mdl-button mdl-js-button mdl-button--primary" href="<%=constants['base_url']%>login/#/">
         <%= contents['index']['text_button_back_to_login'][lang] %>
+      </a>
+    </div>
+  </div>
+  <div id="sign-in-container" class="mdl-card mdl-shadow--16dp hide">
+    <div class="mdl-card__supporting-text">
+      <div id="login-fab" class="mdl-color--lime mdl-color-text--white">
+        <i class="fas fa-user-plus"></i>
+      </div>
+      <div id="card-heading">
+        <%= contents['index']['titulo_form_sign_in'][lang] %>
+      </div>
+      <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white" type="submit">
+        <%= contents['index']['text_button_sign_in'][lang] %>
       </button>
+    </div>
+    <div class="mdl-card__actions">
+      <a id="returnlogin" class="mdl-button mdl-js-button mdl-button--primary" href="<%=constants['base_url']%>login/#/">
+        <%= contents['index']['text_button_back_to_login'][lang] %>
+      </a>
     </div>
   </div>
 </div>

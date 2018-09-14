@@ -27,6 +27,7 @@ var indexJs = function() {
       'bower_components/backbone/backbone-min',
       'bower_components/material-design-lite/material.min',
       'views/login_view',
+      'routes/login_routes',
     ];
   }
   if(constants.data.ambiente_static == 'produccion'){

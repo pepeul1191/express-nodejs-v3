@@ -16,6 +16,7 @@ body {
 
 #login-conatiner, #fogot-email-conatiner{
   margin: auto;
+  margin-top: 10%;
 }
 
 .mdl-card, .mdl-card__supporting-text {
@@ -71,7 +72,7 @@ body {
   margin-top:10px;
 }
 
-#mensaje{
+#login-message{
   text-align: center;
 }
 
