@@ -1,6 +1,7 @@
 var loginRouter = Backbone.Router.extend({
+  signInView: null,
+  forgotPasswordView: null,
   initialize: function() {
-    new LoginView();
   },
   routes: {
     "": "index",
@@ -22,6 +23,9 @@ var loginRouter = Backbone.Router.extend({
     }
   },
   forgotPassword: function(){
+    if(this.forgotPasswordView == null){
+      this.forgotPasswordView = new ForgotPasswordView();
+    }
     if($("#login-container").is(':visible')){
       $("#login-container").fadeOut(500, "linear",function(){
         $("#forgot-password-container").fadeIn(500);
@@ -35,6 +39,9 @@ var loginRouter = Backbone.Router.extend({
     }
   },
   signIn: function(){
+    if(this.signInView == null){
+      this.signInView = new SignInView();
+    }
     if($("#login-container").is(':visible')){
       $("#login-container").fadeOut(500, "linear",function(){
         $("#sign-in-container").fadeIn(500);

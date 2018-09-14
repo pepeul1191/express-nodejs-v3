@@ -48,6 +48,10 @@ exports.content = {
       es: 'Correo Electrónico',
       en: 'Email',
     },
+    placeholder_name: {
+      es: 'Nombre Completo',
+      en: 'Complete Name',
+    },
     message_csrf:{
       es: 'Error en solicitud Token CSRF',
       en: 'Token CSRF request error',

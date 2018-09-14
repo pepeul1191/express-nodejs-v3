@@ -25,7 +25,8 @@ var indexJs = function() {
       'bower_components/underscore/underscore-min',
       'bower_components/backbone/backbone-min',
       'bower_components/material-design-lite/material.min',
-      'views/login_view',
+      'views/sign_in_view',
+      'views/forgot_password_view',
       'routes/login_routes',
     ];
   }
