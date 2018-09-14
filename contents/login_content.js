@@ -45,8 +45,8 @@ exports.content = {
       en: 'Forgot Password',
     },
     placeholder_email: {
-      es: 'Ingrese su Correo Electrónico',
-      en: 'Enter your Email',
+      es: 'Correo Electrónico',
+      en: 'Email',
     },
     message_csrf:{
       es: 'Error en solicitud Token CSRF',

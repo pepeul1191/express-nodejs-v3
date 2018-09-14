@@ -18,6 +18,10 @@ Para cambiar los colores del estilo de Material Design:
 
 y reemplazar public/bower_components/material-design-line/material.min.css
 
+Lista de iconos de Material Design:
+
+    https://material.io/tools/icons/?style=baseline
+
 Solucionar problema nodemon ENOSPC
 
     $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p

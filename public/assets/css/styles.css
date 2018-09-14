@@ -541,3 +541,7 @@ a img{
 .hide{
   display:none;
 }
+
+.pull-right{
+  float: right;
+}

@@ -94,7 +94,7 @@ function lang(req){
   var idioma = 'en';
   if(req.session !== undefined){
     if(req.session.idioma === undefined){
-      req.session.idioma = 'en';
+      req.session.idioma = 'es';
     }
     idioma = req.session.idioma;
   }
