@@ -22,7 +22,11 @@ var indexCss = function() {
 var indexJs = function() {
   if(constants.data.ambiente_static == 'desarrollo'){
     rpta = [
+      'bower_components/jquery/dist/jquery.min',
+      'bower_components/underscore/underscore-min',
+      'bower_components/backbone/backbone-min',
       'bower_components/material-design-lite/material.min',
+      'views/login_view',
     ];
   }
   if(constants.data.ambiente_static == 'produccion'){

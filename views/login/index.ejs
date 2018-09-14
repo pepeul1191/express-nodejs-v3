@@ -1,35 +1,60 @@
 <%- include('../partials/blank_header') %>
-<div class="mdl-layout mdl-js-layout">
+<div class="mdl-layout mdl-js-layout" id="login-view">
   <div id="login-conatiner" class="mdl-card mdl-shadow--16dp">
     <div class="mdl-card__supporting-text">
       <div id="login-fab" class="mdl-color--lime mdl-color-text--white">
         <i class="fas fa-lock"></i>
       </div>
       <div id="card-heading">
-        <%= contents['index']['titulo_form'][lang] %>
+        <%= contents['index']['titulo_form_login'][lang] %>
       </div>
       <form class="login-form" action="<%=constants['base_url']%>login/access" method="post">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" id="username" name="user"/>
-          <label class="mdl-textfield__label" for="username"><%= contents['index']['placeholder_usuario'][lang] %></label>
+          <label class="mdl-textfield__label" for="username"><%= contents['index']['placeholder_user'][lang] %></label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="password" id="password" name="password"/>
-          <label class="mdl-textfield__label" for="password"><%= contents['index']['placeholder_contrasenia'][lang] %></label>
+          <label class="mdl-textfield__label" for="password"><%= contents['index']['placeholder_password'][lang] %></label>
         </div>
         <input type="hidden" name="<%=constants['csrf']['key']%>" value="<%=constants['csrf']['secret']%>">
         <p class="color-error" id="mensaje"><%=message%></p>
         <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white" type="submit">
-          <%= contents['index']['text_button_ingresar'][lang] %>
+          <%= contents['index']['text_button_login'][lang] %>
         </button>
       </form>
     </div>
     <div class="mdl-card__actions">
-      <a class="mdl-button mdl-js-button mdl-button--primary" href="XD">
-        <%= contents['index']['label_registrarse'][lang] %>
+      <a class="mdl-button mdl-js-button mdl-button--primary" href="<%=constants['base_url']%>/login/sigin">
+        <%= contents['index']['label_sigin'][lang] %>
       </a>
-      <button id='forgotpassword' class="mdl-button mdl-js-button mdl-button--primary">
-        <%= contents['index']['label_contrasenia'][lang] %>
+      <button id="forgotpassword" class="mdl-button mdl-js-button mdl-button--primary">
+        <%= contents['index']['label_password'][lang] %>
+      </button>
+    </div>
+  </div>
+  <div id="fogot-email-conatiner" class="mdl-card mdl-shadow--16dp hide">
+    <div class="mdl-card__supporting-text">
+      <div id="login-fab" class="mdl-color--lime mdl-color-text--white">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div id="card-heading">
+        <%= contents['index']['titulo_form_forgot_password'][lang] %>
+      </div>
+      <br>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="email" id="txtEmail"/>
+        <label class="mdl-textfield__label" for="txtEmail"><%= contents['index']['placeholder_email'][lang] %></label>
+      </div>
+      <input type="hidden" name="<%=constants['csrf']['key']%>" value="<%=constants['csrf']['secret']%>">
+      <p class="color-error" id="mensaje"><%=message%></p>
+      <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored   mdl-color-text--white" type="submit">
+        <%= contents['index']['text_button_send_password'][lang] %>
+      </button>
+    </div>
+    <div class="mdl-card__actions">
+      <button id="returnlogin" class="mdl-button mdl-js-button mdl-button--primary">
+        <%= contents['index']['text_button_back_to_login'][lang] %>
       </button>
     </div>
   </div>

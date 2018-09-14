@@ -1,28 +1,44 @@
 exports.content = {
   index: {
-    titulo_form: {
+    titulo_form_login: {
       es: 'Iniciar Sesión',
       en: 'Log In',
     },
-    placeholder_usuario: {
+    titulo_form_forgot_password: {
+      es: 'Enviar Contraseña',
+      en: 'Send Password',
+    },
+    placeholder_user: {
       es: 'Usuario',
       en: 'User',
     },
-    placeholder_contrasenia: {
+    placeholder_password: {
       es: 'Contraseña',
       en: 'Password',
     },
-    text_button_ingresar: {
+    text_button_login: {
       es: 'Ingresar',
       en: 'Login',
     },
-    label_registrarse: {
-      es: 'Registrarse',
-      en: 'Register',
+    text_button_back_to_login: {
+      es: 'Regresar a Login',
+      en: 'Back to Login',
     },
-    label_contrasenia: {
+    text_button_send_password:{
+      es: 'Enviar',
+      en: 'Send',
+    },
+    label_sigin: {
+      es: 'Registrarse',
+      en: 'Sign In',
+    },
+    label_password: {
       es: 'Olvidó su Contraseña',
       en: 'Forgot Password',
+    },
+    placeholder_email: {
+      es: 'Ingrese su Correo Electrónico',
+      en: 'Enter your Email',
     },
     message_csrf:{
       es: 'Error en solicitud Token CSRF',
