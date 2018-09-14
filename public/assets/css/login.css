@@ -28,3 +28,7 @@
 .icon-container:hover, .icon-container > i:hover{
   cursor: default;
 }
+
+.brand{
+  line-height: unset;
+}
