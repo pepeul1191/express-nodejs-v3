@@ -4,7 +4,7 @@ var indexCss = function() {
   var rpta = [];
   if(constants.data.ambiente_static == 'desarrollo'){
     rpta = [
-      'bower_components/material-design-lite/material.min',
+      'assets/css/material.min',
       'assets/css/constants',
       'assets/css/styles',
       'assets/css/login',
